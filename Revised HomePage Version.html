@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gloucester Road Books - Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to enhance the design */
+        body {
+            background-color: #F9F6F1; 
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+        .bottom-nav-shadow {
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+        /* Hide scrollbar for category scroller */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        /* Gradient to hint at scrollable content */
+        .scroll-container {
+            position: relative;
+        }
+        .scroll-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 3rem;
+            background: linear-gradient(to left, #F9F6F1, rgba(249, 246, 241, 0));
+            pointer-events: none; /* Allows clicking through the gradient */
+            transition: opacity 0.3s;
+        }
+        .scroll-container.scrolled-to-end::after {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Main container for the mobile view -->
+    <div class="max-w-md mx-auto bg-white pb-28">
+
+        <!-- Header Section -->
+        <header class="p-4 flex justify-between items-center bg-white/80 backdrop-blur-sm sticky top-0 z-20 border-b border-gray-100">
+            <div class="w-10 h-10 bg-stone-200 rounded-full flex items-center justify-center font-lora font-bold text-stone-600 text-sm">GRB</div>
+            <button aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="space-y-10">
+            
+            <!-- Hero Section with Storefront Image -->
+            <section class="bg-white rounded-b-xl card-shadow overflow-hidden text-center">
+                <img src="https://i0.wp.com/gloucesterroadbooks.com/wp-content/uploads/2025/03/G-RD-BOOKS-Anna-Higgie-lower-res.jpg?resize=1024%2C852&ssl=1" alt="Illustration of the Gloucester Road Books storefront" class="w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Storefront';">
+                <div class="p-6">
+                    <h1 class="font-lora text-3xl font-semibold text-gray-800">Your Neighbourhood Bookshop, Online.</h1>
+                    <p class="mt-2 text-gray-600">Discover curated collections and timeless stories from the heart of Bristol.</p>
+                    <button class="mt-5 w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/20">
+                        Explore The Collection
+                    </button>
+                </div>
+            </section>
+            
+            <div class="p-4 md:p-6 space-y-10">
+                <!-- Store Info Section -->
+                <section class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+                    <h2 class="font-lora text-2xl font-medium mb-5 text-center">Visit Our Shop</h2>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-4 mt-0.5 text-gray-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                            <span>184 Gloucester Road, Bishopston, Bristol, BS7 8NU</span>
+                        </div>
+                        <div class="flex items-center">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-4 text-gray-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                            <a href="mailto:hello@gloucesterroadbooks.com" class="hover:underline">hello@gloucesterroadbooks.com</a>
+                        </div>
+                        <div class="pt-3 mt-3 border-t border-stone-200">
+                            <h3 class="font-semibold mb-2 text-gray-700">Opening Hours:</h3>
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-gray-600">
+                                <p>Mon - Weds:</p><p class="text-right font-medium">9:30 - 17:00</p>
+                                <p>Thurs - Sat:</p><p class="text-right font-medium">9:30 - 18:00</p>
+                                <p>Sunday:</p><p class="text-right font-medium">Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Shop Online / Categories Section -->
+                <section>
+                    <h2 class="font-lora text-2xl font-medium mb-4 text-center">Find Your Next Read</h2>
+                    <div id="category-scroller" class="relative">
+                        <div class="scroll-container">
+                            <div id="category-list" class="flex items-center gap-3 overflow-x-auto scrollbar-hide scroll-smooth cursor-grab active:cursor-grabbing">
+                                <button class="bg-teal-50 text-teal-800 font-semibold py-3 px-4 rounded-lg text-sm transition-colors hover:bg-teal-100 border border-teal-100 flex-shrink-0">New In</button>
+                                <button class="bg-indigo-50 text-indigo-800 font-semibold py-3 px-4 rounded-lg text-sm transition-colors hover:bg-indigo-100 border border-indigo-100 flex-shrink-0">Fiction</button>
+                                <button class="bg-amber-50 text-amber-800 font-semibold py-3 px-4 rounded-lg text-sm transition-colors hover:bg-amber-100 border border-amber-100 flex-shrink-0">Non-Fiction</button>
+                                <button class="bg-rose-50 text-rose-800 font-semibold py-3 px-4 rounded-lg text-sm transition-colors hover:bg-rose-100 border border-rose-100 flex-shrink-0">Signed</button>
+                                <button class="bg-sky-50 text-sky-800 font-semibold py-3 px-4 rounded-lg text-sm transition-colors hover:bg-sky-100 border border-sky-100 flex-shrink-0">Children's</button>
+                                <button class="bg-lime-50 text-lime-800 font-semibold py-3 px-4 rounded-lg text-sm transition-colors hover:bg-lime-100 border border-lime-100 flex-shrink-0">Poetry</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Books Section -->
+                <section>
+                    <h2 class="font-lora text-2xl font-medium mb-4 text-center">New & Noteworthy</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg overflow-hidden transition-shadow hover:shadow-lg card-shadow">
+                            <img src="https://i0.wp.com/ping2.batch.co.uk/blcover/m/9781526656933.jpg?w=980&ssl=1" alt="Book cover for Twist" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x450/E2E8F0/4A5568?text=Book+Cover';">
+                            <div class="p-3">
+                                <h3 class="font-semibold truncate">Twist</h3>
+                                <p class="text-sm text-gray-500 truncate">Colum McCann</p>
+                                <p class="font-bold mt-2">£18.99</p>
+                                <button class="w-full mt-2 bg-gray-800 text-white text-sm font-semibold py-2 rounded-md hover:bg-gray-900 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg overflow-hidden transition-shadow hover:shadow-lg card-shadow">
+                            <img src="https://ping.batch.co.uk/blcover/m/9780241393666.jpg?s=0-m-5030670183104/1-2Be8CCAmWNMiSGqbyhlpUEG%2Bv80%3D" alt="Book cover for Ruth & Pen" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x450/E2E8F0/4A5568?text=Book+Cover';">
+                            <div class="p-3">
+                                <h3 class="font-semibold truncate">Ruth & Pen</h3>
+                                <p class="text-sm text-gray-500 truncate">Emilie Pine</p>
+                                <p class="font-bold mt-2">£14.99</p>
+                                <button class="w-full mt-2 bg-gray-800 text-white text-sm font-semibold py-2 rounded-md hover:bg-gray-900 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Staff Picks Section -->
+                <section>
+                    <h2 class="font-lora text-2xl font-medium mb-4 text-center">Staff Picks</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg overflow-hidden transition-shadow hover:shadow-lg card-shadow">
+                            <img src="https://i0.wp.com/ping2.batch.co.uk/blcover/m/9780749032906.jpg?w=980&ssl=1" alt="Book cover for Darek Jarman" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x450/E2E8F0/4A5568?text=Book+Cover';">
+                            <div class="p-3">
+                                <h3 class="font-semibold truncate">Darek Jarman</h3>
+                                <p class="text-sm text-gray-500 truncate">Tony Peake</p>
+                                <p class="font-bold mt-2">£16.99</p>
+                                <button class="w-full mt-2 bg-gray-800 text-white text-sm font-semibold py-2 rounded-md hover:bg-gray-900 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg overflow-hidden transition-shadow hover:shadow-lg card-shadow">
+                            <img src="https://i0.wp.com/ping2.batch.co.uk/blcover/m/9781399624947.jpg?w=980&ssl=1" alt="Book cover for Volcanic Tongue" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/300x450/E2E8F0/4A5568?text=Book+Cover';">
+                            <div class="p-3">
+                                <h3 class="font-semibold truncate">Volcanic Tongue</h3>
+                                <p class="text-sm text-gray-500 truncate">David Keenan</p>
+                                <p class="font-bold mt-2">£30.00</p>
+                                <button class="w-full mt-2 bg-gray-800 text-white text-sm font-semibold py-2 rounded-md hover:bg-gray-900 transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Testimonial Section -->
+                <section>
+                    <h2 class="font-lora text-2xl font-medium mb-4 text-center">What Our Readers Say</h2>
+                    <div class="bg-stone-50 rounded-xl p-6 border border-stone-200 text-center relative">
+                        <svg class="w-16 h-16 text-stone-200 absolute top-0 left-0 -translate-x-4 -translate-y-4" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                            <path d="M9.333 22.583c0-2.75 1.167-5.583 3.5-8.5-1.5-1.417-2.583-3.083-3.25-5C9 8 9.083 6.917 9.5 5.75c.417-1.167 1.25-2.083 2.5-2.75.833-.5 1.583-.75 2.25-.75.667 0 1.167.167 1.5.5.333.333.5.75.5 1.25 0 .5-.167.917-.5 1.25-.333.333-.75.5-1.25.5-2.417 0-4.083 1.167-5 3.5.917.5 1.75 1.167 2.5 2 .75.833 1.333 1.667 1.75 2.5.417.833.625 1.75.625 2.75 0 2.583-1 4.75-3 6.5S11.917 24 9.333 24c-1.5 0-2.75-.417-3.75-1.25S4 20.667 4 19.333c0-1.083.417-2.083 1.25-3 .833-.917 1.833-1.375 3-1.375.583 0 1.083.167 1.5.5.417.333.625.75.625 1.25s-.208.917-.625 1.25c-.417.333-.917.5-1.5.5Z M22.333 22.583c0-2.75 1.167-5.583 3.5-8.5-1.5-1.417-2.583-3.083-3.25-5C22 8 22.083 6.917 22.5 5.75c.417-1.167 1.25-2.083 2.5-2.75.833-.5 1.583-.75 2.25-.75.667 0 1.167.167 1.5.5.333.333.5.75.5 1.25 0 .5-.167.917-.5 1.25-.333.333-.75.5-1.25.5-2.417 0-4.083 1.167-5 3.5.917.5 1.75 1.167 2.5 2 .75.833 1.333 1.667 1.75 2.5.417.833.625 1.75.625 2.75 0 2.583-1 4.75-3 6.5S24.917 24 22.333 24c-1.5 0-2.75-.417-3.75-1.25S17 20.667 17 19.333c0-1.083.417-2.083 1.25-3 .833-.917 1.833-1.375 3-1.375.583 0 1.083.167 1.5.5.417.333.625.75.625 1.25s-.208.917-.625 1.25c-.417.333-.917.5-1.5.5Z"></path>
+                        </svg>
+                        <p class="font-lora italic text-lg text-gray-700">"My favourite bookshop in Bristol, a wonderful little treasure trove with a fantastic selection of books and the loveliest staff."</p>
+                        <p class="mt-4 font-semibold text-gray-600">- A Happy Customer</p>
+                    </div>
+                </section>
+
+                <!-- NEW: Evoxal.Design Promotion Section -->
+                <section class="text-center pt-10 mt-10 border-t border-stone-200">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Project Demo</h3>
+                    <p class="font-lora text-lg mt-2">Made by <span class="font-semibold">Shivam Pandya</span></p>
+                    <p class="mt-1 text-gray-600">by <a href="https://evoxal.design/" target="_blank" class="font-semibold text-blue-600 hover:underline">Evoxal.Design</a></p>
+                    <p class="mt-1 text-gray-600">for <a href="https://gloucesterroadbooks.com/" target="_blank" class="font-semibold text-blue-600 hover:underline">Gloucester Road books</a></p>
+                    <p class="text-sm text-gray-500 mt-2">Contact: <a href="mailto:evoxal.design@gmail.com" class="hover:underline">evoxal.design@gmail.com</a></p>
+                    <a href="https://evoxal.design/" target="_blank" class="mt-4 inline-block bg-white text-gray-800 font-semibold py-2 px-5 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors">
+                        View Portfolio
+                    </a>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/90 backdrop-blur-sm border-t border-gray-200 bottom-nav-shadow">
+            <nav class="flex justify-around items-center h-16">
+                <a href="#" class="flex flex-col items-center justify-center text-gray-500 hover:text-blue-600 transition-colors w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                    <span class="text-xs font-medium mt-0.5">Account</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center text-gray-500 hover:text-blue-600 transition-colors w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    <span class="text-xs font-medium mt-0.5">Search</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center text-gray-500 hover:text-blue-600 transition-colors w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                    <span class="text-xs font-medium mt-0.5">Cart</span>
+                </a>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for the horizontal category scroller
+        document.addEventListener('DOMContentLoaded', () => {
+            const scroller = document.getElementById('category-list');
+            if (!scroller) return;
+            const scrollContainer = scroller.closest('.scroll-container');
+
+            // --- Drag to scroll functionality ---
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            scroller.addEventListener('mousedown', (e) => {
+                isDown = true;
+                scroller.classList.add('active');
+                startX = e.pageX - scroller.offsetLeft;
+                scrollLeft = scroller.scrollLeft;
+            });
+            scroller.addEventListener('mouseleave', () => {
+                isDown = false;
+                scroller.classList.remove('active');
+            });
+            scroller.addEventListener('mouseup', () => {
+                isDown = false;
+                scroller.classList.remove('active');
+            });
+            scroller.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - scroller.offsetLeft;
+                const walk = (x - startX) * 2; // scroll-fast
+                scroller.scrollLeft = scrollLeft - walk;
+            });
+
+            // --- Gradient fade out on scroll end ---
+            const checkScrollEnd = () => {
+                if (!scrollContainer) return;
+                const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
+                // Add a small buffer to ensure it triggers correctly
+                if (scroller.scrollLeft >= maxScrollLeft - 10) { 
+                    scrollContainer.classList.add('scrolled-to-end');
+                } else {
+                    scrollContainer.classList.remove('scrolled-to-end');
+                }
+            };
+
+            scroller.addEventListener('scroll', checkScrollEnd);
+            checkScrollEnd(); // Initial check on load
+        });
+    </script>
+</body>
+</html>
